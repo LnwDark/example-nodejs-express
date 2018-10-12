@@ -38,7 +38,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - setup_remote_docker
-      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - run: sudo docker login -u surichai -p surichai04061
       - run:
           name: "Build docker image and push to docker hub"
           command: |
